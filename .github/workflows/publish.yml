@@ -2,23 +2,27 @@ name: Publish to npm
 on:
   push:
     branches: [main]
+
+# CRITICAL: Add permissions here to enable OIDC
+permissions:
+  id-token: write    # This enables OIDC authentication
+  contents: read     # Required to read repository contents
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/checkout@v4  # Updated to v4
+        
+      - name: Setup Node.js with OIDC
+        uses: actions/setup-node@v4  # Updated to v4
         with:
-          node-version: '18'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: '20'  # Consider upgrading from Node 18
+          registry-url: 'https://registry.npmjs.org/'
+          # OIDC token is automatically used, no NODE_AUTH_TOKEN needed
       
-      - name: Publish to npm
-        run: |
-          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+      - name: Publish to npm via OIDC
+        run: npm publish --access public
+        # No env variables needed for OIDC!

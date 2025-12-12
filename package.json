@@ -1,5 +1,5 @@
 {
-  "name": "js-face-identifier",
+  "name": "face-identifier-js",
   "version": "1.0.0",
   "description": "Pure face recognition engine for JavaScript",
   "main": "face-identifier.js",
