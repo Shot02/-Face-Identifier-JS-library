@@ -1,31 +1,21 @@
 {
   "name": "face-identifier-js",
   "version": "1.0.0",
-  "description": "A pure face recognition engine for JavaScript - register and identify faces with 512-dim embeddings",
+  "description": "Pure face recognition engine for JavaScript",
   "main": "face-identifier.js",
-  "scripts": {
-    "test": "echo \"No tests specified\" && exit 0"
-  },
+  "scripts": {},
   "keywords": [
     "face",
     "recognition",
     "detection",
     "face-api.js",
-    "biometric",
-    "authentication",
-    "face-identification"
+    "biometric"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Your Name",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/face-identifier-js.git"
+    "url": "https://github.com/Shot02/face-identifier-js.git"
   },
-  "bugs": {
-    "url": "https://github.com/yourusername/face-identifier-js/issues"
-  },
-  "homepage": "https://github.com/yourusername/face-identifier-js#readme",
-  "peerDependencies": {
-    "face-api.js": "^0.22.2"
-  }
+  "files": ["face-identifier.js"]
 }
