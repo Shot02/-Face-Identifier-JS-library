@@ -1,21 +1,13 @@
 {
-  "name": "face-identifier-js",
+  "name": "js-face-identifier",
   "version": "1.0.0",
   "description": "Pure face recognition engine for JavaScript",
   "main": "face-identifier.js",
-  "scripts": {},
-  "keywords": [
-    "face",
-    "recognition",
-    "detection",
-    "face-api.js",
-    "biometric"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shot02/face-identifier-js.git"
-  },
-  "files": ["face-identifier.js"]
+    "url": "https://github.com/Shot02/face_identifier_js.git"
+  }
 }
